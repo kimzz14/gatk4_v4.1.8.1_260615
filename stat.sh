@@ -1,1 +1,1 @@
-bash stat.sh CRR289914.NGS-P
+bash pipe/stat.sh DRR083934.NGS
