@@ -8,6 +8,7 @@ if [ -z ${readID} ]; then
 fi
 
 #command
+echo "bash pipe/stat.sh ${readID}" >> stat.sh
 while read -r chrom chromLen rest; do
-    echo "bash pipe/run_gatk.sh 24 ${readID} ${chrom}"
+    echo "bash pipe/run_gatk.sh 24 ${readID} ${chrom}" >> run0001.sh
 done < "db/ref.fa.fai"
