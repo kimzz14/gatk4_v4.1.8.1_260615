@@ -57,7 +57,7 @@ ${GATK} --java-options "-Djava.io.tmpdir=./tmp" AddOrReplaceReadGroups \
 2>                      result/${readID}.bwa-memT001.fixmate.sorted.byChrom/${readID}.bwa-memT001.fixmate.RGsorted.${chrom}.bam.err
 
 ${SAMTOOLS} index \
-    --threads ${threadN} \
+    -@ ${threadN} \
     -c result/${readID}.bwa-memT001.fixmate.sorted.byChrom/${readID}.bwa-memT001.fixmate.RGsorted.${chrom}.bam \
     1> result/${readID}.bwa-memT001.fixmate.sorted.byChrom/${readID}.bwa-memT001.fixmate.RGsorted.${chrom}.bam.csi.log \
     2> result/${readID}.bwa-memT001.fixmate.sorted.byChrom/${readID}.bwa-memT001.fixmate.RGsorted.${chrom}.bam.csi.err
